@@ -43,7 +43,7 @@ int Game::minimax(int depth, bool isMaximizing,
     int size = board.getSize();
 
     if (isMaximizing) {
-        // Tura AI - szukamy ruchu o NAJWIEKSZEJ wartosci
+        // Tura AI - szukamy ruchu o najwiekszej wartosci
         int best = numeric_limits<int>::min();
         for (int r = 0; r < size && beta > alpha; r++) {
             for (int c = 0; c < size && beta > alpha; c++) {
@@ -61,7 +61,7 @@ int Game::minimax(int depth, bool isMaximizing,
         return best;
     }
     else {
-        // Tura przeciwnika - szukamy ruchu o NAJMNIEJSZEJ wartosci
+        // Tura przeciwnika - szukamy ruchu o najmniejszej wartosci
         int best = numeric_limits<int>::max();
         for (int r = 0; r < size && beta > alpha; r++) {
             for (int c = 0; c < size && beta > alpha; c++) {
